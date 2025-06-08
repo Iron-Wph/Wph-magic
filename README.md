@@ -13,3 +13,6 @@ scp -r F:\NowData\数据增强\new wph@172.31.71.192:/media/data/workplace_wph
 
 ## 具身智能学习路线（长期工作！！！）
 https://yv6uc1awtjc.feishu.cn/wiki/KuXTwBY45iRuvokxiIwcHEnVnsh
+
+## MCP基础介绍与使用
+https://zihao-ai.feishu.cn/wiki/WhQlwydkMieX4Tki7lbcHK6TnUe
