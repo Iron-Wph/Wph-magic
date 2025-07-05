@@ -16,3 +16,13 @@ https://yv6uc1awtjc.feishu.cn/wiki/KuXTwBY45iRuvokxiIwcHEnVnsh
 
 ## MCP基础介绍与使用
 https://zihao-ai.feishu.cn/wiki/WhQlwydkMieX4Tki7lbcHK6TnUe
+
+## LLM快速学习（datawhale）
+#### LLM部署使用学习
+https://github.com/datawhalechina/self-llm
+#### LLM原理学习
+https://github.com/datawhalechina/happy-llm
+#### LLM应用学习
+https://github.com/datawhalechina/llm-universe
+
+
