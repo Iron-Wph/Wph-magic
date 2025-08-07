@@ -25,4 +25,7 @@ https://github.com/datawhalechina/happy-llm
 #### LLM应用学习
 https://github.com/datawhalechina/llm-universe
 
+#### Ditital Ocean密码
+WPH123456789SZU
+
 
