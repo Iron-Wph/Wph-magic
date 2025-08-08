@@ -28,4 +28,7 @@ https://github.com/datawhalechina/llm-universe
 #### Ditital Ocean密码
 WPH123456789SZU
 
+### huggingface cli 下载数据集
+huggingface-cli download --repo-type dataset --resume-download 复制数据集名称 --local-dir 下载路径
+
 
