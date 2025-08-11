@@ -31,4 +31,10 @@ WPH123456789SZU
 ### huggingface cli 下载数据集
 huggingface-cli download --repo-type dataset --resume-download 复制数据集名称 --local-dir 下载路径
 
+### tmux使用
+###### 创建指定名称的会话
+tmux new-session -s 会话名称
+###### 切换到指定会话
+tmux a -t 会话名称
+
 
