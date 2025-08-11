@@ -28,7 +28,14 @@ https://github.com/datawhalechina/llm-universe
 #### Ditital Ocean密码
 WPH123456789SZU
 
+
 ### huggingface cli 下载数据集
+#### 依赖安装
+pip install huggingface_hub[cli]        # way 1: base den install 
+pip install "huggingface_hub[cli,fast_download]"    # way 2: support bigfile install
+#### 配置镜像网站
+export HF_ENDPOINT=https://hf-mirror.com
+#### 数据集下载
 huggingface-cli download --repo-type dataset --resume-download 复制数据集名称 --local-dir 下载路径
 
 ### tmux使用
