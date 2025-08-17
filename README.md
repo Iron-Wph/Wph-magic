@@ -30,7 +30,7 @@ WPH123456789SZU
 
 
 ### huggingface cli 下载数据集
-```
+```python
 #### 依赖安装
 pip install huggingface_hub[cli]        # way 1: base den install 
 pip install "huggingface_hub[cli,fast_download]"    # way 2: support bigfile install
@@ -48,5 +48,10 @@ tmux a -t 会话名称
 ###### 关闭会话
 exit # 会话内输入指令
 tmux kill-session -t 会话名称  # 会话外输入指令
+
+### 单机多卡训练，关闭所有进程
+```python
+nvidia-smi -i 0 | grep 'python' | awk '{print $5}' | xargs -n1 kill -9
+```
 
 
