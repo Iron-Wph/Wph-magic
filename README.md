@@ -54,4 +54,6 @@ tmux kill-session -t 会话名称  # 会话外输入指令
 nvidia-smi -i 0 | grep 'python' | awk '{print $5}' | xargs -n1 kill -9
 ```
 
+### 存储路径
+/mnt/nvme/yfyuan/LZL/jacobian/wph
 
