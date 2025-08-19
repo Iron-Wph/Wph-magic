@@ -11,6 +11,15 @@ scp -r 本机目录 username@IP:远程主机目录
 scp -r F:\NowData\数据增强\new wph@172.31.71.192:/media/data/workplace_wph
 ```
 
+## 为服务器配置代理
+```python
+git clone --branch master --depth 1 https://gh-proxy.com/https://github.com/nelvko/clash-for-linux-install.git \
+  && cd clash-for-linux-install \
+  && sudo bash install.sh
+
+# 在输入VPN节点的订阅链接即可启动
+```
+
 ## 具身智能学习路线（长期工作！！！）
 https://yv6uc1awtjc.feishu.cn/wiki/KuXTwBY45iRuvokxiIwcHEnVnsh
 
