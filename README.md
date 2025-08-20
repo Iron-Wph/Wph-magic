@@ -20,6 +20,21 @@ git clone --branch master --depth 1 https://gh-proxy.com/https://github.com/nelv
 # 在输入VPN节点的订阅链接即可启动
 ```
 
+## Docker使用
+```python
+# 先查看所有运行中的容器，找到要停止的容器ID或名称
+docker ps
+
+# 停止指定容器（使用容器ID或名称）
+docker stop <容器ID或容器名称>
+
+# 示例：停止ID为abc123的容器
+docker stop abc123
+
+# 强制停止容器（类似kill命令）
+docker kill <容器ID或容器名称>
+```
+
 ## 具身智能学习路线（长期工作！！！）
 https://yv6uc1awtjc.feishu.cn/wiki/KuXTwBY45iRuvokxiIwcHEnVnsh
 
