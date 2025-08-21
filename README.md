@@ -25,6 +25,9 @@ git clone --branch master --depth 1 https://gh-proxy.com/https://github.com/nelv
 # 先查看所有运行中的容器，找到要停止的容器ID或名称
 docker ps
 
+# 进入已经运行的镜像 
+docker exec -it 容器名称或ID bash
+
 # 停止指定容器（使用容器ID或名称）
 docker stop <容器ID或容器名称>
 
