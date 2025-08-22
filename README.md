@@ -36,6 +36,17 @@ docker stop abc123
 
 # 强制停止容器（类似kill命令）
 docker kill <容器ID或容器名称>
+
+# 保存新的镜像
+docker commit 旧镜像名 新镜像名:版本号
+
+# 删除镜像
+docker rmi 镜像名称
+```
+
+## Jupyter启动isaaclab
+```bash
+jupyter lab --no-browser --port=8888 --ip=0.0.0.0 --allow-root
 ```
 
 ## 具身智能学习路线（长期工作！！！）
