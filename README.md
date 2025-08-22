@@ -97,6 +97,7 @@ huggingface-cli download --repo-type dataset --resume-download 复制数据集�
 ```
 
 ### tmux使用
+```python
 ###### 创建指定名称的会话
 tmux new-session -s 会话名称
 ###### 切换到指定会话
@@ -104,6 +105,7 @@ tmux a -t 会话名称
 ###### 关闭会话
 exit # 会话内输入指令
 tmux kill-session -t 会话名称  # 会话外输入指令
+```
 
 ### 单机多卡训练，关闭所有进程
 ```python
