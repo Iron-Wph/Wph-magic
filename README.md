@@ -55,6 +55,11 @@ docker run --name isaac-lab --entrypoint bash -it --runtime=nvidia --gpus all -e
     -v ~/docker/isaac-sim/data:/root/.local/share/ov/data:rw \
     -v ~/docker/isaac-sim/documents:/root/Documents:rw \
     nvcr.io/nvidia/isaac-lab:2.1.0
+
+# 根据Dockerfile构建镜像
+docker build -t 镜像名:版本号 . (当前目录)
+# eg:
+docker build -t isaac-lab:v0 .
 ```
 
 ## Jupyter启动isaaclab
