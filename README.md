@@ -60,6 +60,10 @@ docker run --name isaac-lab --entrypoint bash -it --runtime=nvidia --gpus all -e
 docker build -t 镜像名:版本号 . (当前目录)
 # eg:
 docker build -t isaac-lab:v0 .
+# Dockefile 文件内容示例
+FROM nvcr.io/nvidia/isaac-lab:2.1.0            # 基于某个镜像
+RUN /workspace/isaaclab/_isaac_sim/kit/python/bin/python3 -m pip install jupyter  # 安装jupyter
+ENV PATH="/isaac-sim/kit/python/bin:${PATH}"        # 自动设置环境变量
 ```
 
 ## Jupyter启动isaaclab
