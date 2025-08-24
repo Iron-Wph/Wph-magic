@@ -46,6 +46,19 @@ docker rmi 镜像名称
 # 运行isaaclab镜像
 docker run --name isaac-lab --entrypoint bash -it --runtime=nvidia --gpus all -e "ACCEPT_EULA=Y" --rm --network=host \
     -e "PRIVACY_CONSENT=Y" \
+    -v ~/docker/isaac-sim/cache/kit:/isaac-sim/kit/cache:rw \
+    -v ~/docker/isaac-sim/cache/ov:/root/.cache/ov:rw \
+    -v ~/docker/isaac-sim/cache/pip:/root/.cache/pip:rw \
+    -v ~/docker/isaac-sim/cache/glcache:/root/.cache/nvidia/GLCache:rw \
+    -v ~/docker/isaac-sim/cache/computecache:/root/.nv/ComputeCache:rw \
+    -v ~/docker/isaac-sim/logs:/root/.nvidia-omniverse/logs:rw \
+    -v ~/docker/isaac-sim/data:/root/.local/share/ov/data:rw \
+    -v ~/docker/isaac-sim/documents:/root/Documents:rw \
+    -v /data1/wph/robot:/workspace/isaaclab/robot:rw \
+    isaac-lab:v1
+
+docker run --name isaac-lab --entrypoint bash -it --runtime=nvidia --gpus all -e "ACCEPT_EULA=Y" --rm --network=host \
+    -e "PRIVACY_CONSENT=Y" \
     -v /home/zbz/docker/isaac-sim/cache/kit:/isaac-sim/kit/cache:rw \
     -v /home/zbz/docker/isaac-sim/cache/ov:/root/.cache/ov:rw \
     -v /home/zbz/docker/isaac-sim/cache/pip:/root/.cache/pip:rw \
