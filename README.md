@@ -54,7 +54,7 @@ docker run --name isaac-lab --entrypoint bash -it --runtime=nvidia --gpus all -e
     -v ~/docker/isaac-sim/logs:/root/.nvidia-omniverse/logs:rw \
     -v ~/docker/isaac-sim/data:/root/.local/share/ov/data:rw \
     -v ~/docker/isaac-sim/documents:/root/Documents:rw \
-    -v /data1/wph/robot:/workspace/isaaclab/robot:rw \
+    -v /data1/wph/robot:/workspace/robot:rw \
     isaac-lab:v1
 
 docker run --name isaac-lab --entrypoint bash -it --runtime=nvidia --gpus all -e "ACCEPT_EULA=Y" --rm --network=host \
