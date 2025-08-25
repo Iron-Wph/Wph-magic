@@ -103,6 +103,9 @@ https://github.com/datawhalechina/happy-llm
 #### LLM应用学习
 https://github.com/datawhalechina/llm-universe
 
+### DL may be work
+http://www.weixiushen.com/project/CNNTricks/CNNTricks.html
+
 #### Ditital Ocean密码
 WPH123456789SZU
 
@@ -136,4 +139,5 @@ nvidia-smi -i 0 | grep 'python' | awk '{print $5}' | xargs -n1 kill -9
 
 ### 存储路径
 /mnt/nvme/yfyuan/LZL/jacobian/wph
+
 
