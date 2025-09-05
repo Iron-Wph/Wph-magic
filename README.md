@@ -43,6 +43,9 @@ docker commit 旧镜像名 新镜像名:版本号
 # 删除镜像
 docker rmi 镜像名称
 
+# 直接以root进入镜像
+docker exec -it -u root EmbodiedGen-wph bash
+
 # 运行isaaclab镜像
 docker run --name isaac-lab --entrypoint bash -it --runtime=nvidia --gpus all -e "ACCEPT_EULA=Y" --rm --network=host \
     -e "PRIVACY_CONSENT=Y" \
