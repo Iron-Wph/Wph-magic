@@ -144,3 +144,7 @@ nvidia-smi -i 0 | grep 'python' | awk '{print $5}' | xargs -n1 kill -9
 /mnt/nvme/yfyuan/LZL/jacobian/wph
 
 
+### 运行RDT测试
+cd RDT Repo
+python -m eval_sim.eval_maniskill --pretrained_path /home/wph/RoboticsDiffusionTransformer/eval_sim/rdt/mp_rank_00_model_states.pt
+
