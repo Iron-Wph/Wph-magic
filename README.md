@@ -150,3 +150,24 @@ cd RDT Repo
 python -m eval_sim.eval_maniskill --pretrained_path /home/wph/RoboticsDiffusionTransformer/eval_sim/rdt/mp_rank_00_model_states.pt
 ```
 
+### IsaacLab启动
+```python
+#### 流传输模式启动
+cd /home/lzl/Projects/Isaac/envs      # 进入isaac文件夹
+source ./isaaclab/bin/activate        # 激活 uv 环境
+# 启动UI
+PUBLIC_IP=172.31.226.165
+sudo /data1/lzl/Projects/Isaac/envs/isaaclab/bin/isaacsim \
+  isaacsim.exp.full.streaming --no-window \
+  --/app/livestream/publicEndpointAddress="${PUBLIC_IP}" \
+  --/app/livestream/port=49100 --allow-root
+
+#### 直接使用python方式启动
+sudo /home/lzl/Projects/Isaac/envs/isaaclab/bin/python3 -m pip list     # 第一种：使用完整的python路径
+# 第二种：路径启动别名
+alias isaacpy="/home/lzl/Projects/Isaac/envs/isaaclab/bin/python3"
+sudo isaacpy -m pip list
+# 第三种：设置临时环境变量
+ISAAC_PYTHON="/home/lzl/Projects/Isaac/envs/isaaclab/bin/python3"
+sudo $ISAAC_PYTHON -m pip list 
+```
