@@ -164,10 +164,7 @@ sudo /data1/lzl/Projects/Isaac/envs/isaaclab/bin/isaacsim \
 
 #### 直接使用python方式启动
 sudo /home/lzl/Projects/Isaac/envs/isaaclab/bin/python3 -m pip list     # 第一种：使用完整的python路径
-# 第二种：路径启动别名
-alias isaacpy="/home/lzl/Projects/Isaac/envs/isaaclab/bin/python3"
-sudo isaacpy -m pip list
-# 第三种：设置临时环境变量
+# 第二种：设置临时环境变量
 ISAAC_PYTHON="/home/lzl/Projects/Isaac/envs/isaaclab/bin/python3"
 sudo $ISAAC_PYTHON -m pip list 
 ```
