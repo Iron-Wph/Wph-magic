@@ -155,6 +155,8 @@ python -m eval_sim.eval_maniskill --pretrained_path /home/wph/RoboticsDiffusionT
 #### 流传输模式启动
 cd /home/lzl/Projects/Isaac/envs      # 进入isaac文件夹
 source ./isaaclab/bin/activate        # 激活 uv 环境
+# 或者直接
+source /home/lzl/Projects/Isaac/envs/isaaclab/bin/activate
 # 启动UI
 PUBLIC_IP=172.31.226.165
 sudo /data1/lzl/Projects/Isaac/envs/isaaclab/bin/isaacsim \
