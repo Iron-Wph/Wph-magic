@@ -122,6 +122,9 @@ pip install "huggingface_hub[cli,fast_download]"    # way 2: support bigfile ins
 export HF_ENDPOINT=https://hf-mirror.com
 #### 数据集下载
 huggingface-cli download --repo-type dataset --resume-download 复制数据集名称 --local-dir 下载路径
+#### 模型checkpoint下载
+huggingface-cli download --resume-download [huggingface对应仓库名字] --local-dir [默认使用仓库名字作保存]
+# eg: huggingface-cli download --resume-download stabilityai/stable-diffusion-3.5-medium --local-dir stabilityai/stable-diffusion-3.5-medium
 ```
 
 ### tmux使用
