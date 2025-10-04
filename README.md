@@ -11,6 +11,13 @@ scp -r 本机目录 username@IP:远程主机目录
 scp -r F:\NowData\数据增强\new wph@172.31.71.192:/media/data/workplace_wph
 ```
 
+## 豆包阅读英文文献指令
+```
+请你阅读并理解这篇文献，然后将该篇文章的标题作为一级标题，将摘要和各个大标题作为二级标题，将小标题作为三级标题，将小标题下每一部分内容作为四级标题，给我以markdown的语言输出中文的翻译。去掉致谢和参考文献的部分。
+
+请你以“该篇文章的笔记"为一级标题，分别以“1.该篇文章的研究目的"、"2.该篇文章的研究方法”、“3.该篇文章的研究内容”、“4.该篇文章的最大创新点”、“5.该篇文章给我们的启发"为二级标题，总结的这五部分内容作为三级表题，给我总结后以markdown的语吉输出。
+```
+
 ## 为服务器配置代理
 ```python
 git clone --branch master --depth 1 https://gh-proxy.com/https://github.com/nelvko/clash-for-linux-install.git \
