@@ -184,4 +184,12 @@ sudo $ISAAC_PYTHON -m pip list
 #### 启动脚本的UI可视化
 sudo $ISAAC_PYTHON scripts/rsl_rl/random_agent.py  --task=Template-Isaac-Manipulation-Franka-Play-v0  \
 --livestream 2  --kit_args="--/app/livestream/publicEndpointAddress=${PUBLIC_IP} --/app/livestream/port=49100"
+
+CUDA_VISIBLE_DEVICES=0,1,2,3 python scripts/rsl_rl/test.py \                                                                             
+  --task=Template-Isaac-Manipulation-Franka-IK-Abs-v0 \
+  --livestream 2 \
+  --kit_args="--/app/livestream/publicEndpointAddress=${PUBLIC_IP} --/app/livestream/port=49100" \
+  --enable_cameras \
+  --num_envs 1
+
 ```
