@@ -5,10 +5,20 @@
 https://zh.persian-books.sk/
 
 ## 快速向服务器传输文件，可能需要在同一个子网下
-```
+```python
+# 使用scp(已启用)，使用rsync(二者用法一致)
+## 向服务器传输文件(同一子网)I
 scp -r 本机目录 username@IP:远程主机目录
+rsync -r 本机目录 username@IP:远程主机目录
 示例：
 scp -r F:\NowData\数据增强\new wph@172.31.71.192:/media/data/workplace_wph
+rsync -r F:\NowData\数据增强\new wph@172.31.71.192:/media/data/workplace_wph
+## 向本机传输文件(同一子网)I
+scp -r username@IP:远程主机目录 本机目录
+rsync -r username@IP:远程主机目录 本机目录 
+示例：
+scp -r wph@172.31.71.192:/media/data/workplace_wph F:\NowData\数据增强\new
+rsync -r wph@172.31.71.192:/media/data/workplace_wph F:\NowData\数据增强\new
 ```
 
 ## 豆包阅读英文文献指令
