@@ -22,7 +22,7 @@ rsync -r username@IP:远程主机目录 本机目录
 scp -r wph@172.31.71.192:/media/data/workplace_wph F:\NowData\数据增强\new
 # 先启动虚拟机，wsl可能只支持/ 不支持 \
 wsl
-rsync -r wph@172.31.226.165:/data1/wph/SimpleVLA-RL/models /mnt/C/Users/Wph/Desktop/models        # /mnt/C/Users/Wph/Desktop/models对应本地的C:/Users/Wph/Desktop/models
+sync -r -P -e "ssh -p 2222" wph@172.31.226.165:/data1/wph/SimpleVLA-RL/models /mnt/c/Users/Wph/Desktop/models        # /mnt/c/Users/Wph/Desktop/models对应本地的C:/Users/Wph/Desktop/models
 rsync -r wph@172.31.71.192:/media/data/workplace_wph F:\NowData\数据增强\new
 ```
 
