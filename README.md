@@ -12,12 +12,16 @@ scp -r 本机目录 username@IP:远程主机目录
 rsync -r 本机目录 username@IP:远程主机目录
 示例：
 scp -r F:\NowData\数据增强\new wph@172.31.71.192:/media/data/workplace_wph
+# 先启动虚拟机
+wsl 
 rsync -r F:\NowData\数据增强\new wph@172.31.71.192:/media/data/workplace_wph
 ## 向本机传输文件(同一子网)I
 scp -r username@IP:远程主机目录 本机目录
 rsync -r username@IP:远程主机目录 本机目录 
 示例：
 scp -r wph@172.31.71.192:/media/data/workplace_wph F:\NowData\数据增强\new
+# 先启动虚拟机
+wsl 
 rsync -r wph@172.31.71.192:/media/data/workplace_wph F:\NowData\数据增强\new
 ```
 
