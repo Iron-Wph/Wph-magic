@@ -142,7 +142,11 @@ WPH123456789SZU
 pip install huggingface_hub[cli]        # way 1: base den install 
 pip install "huggingface_hub[cli,fast_download]"    # way 2: support bigfile install
 #### 配置镜像网站
+###### Linux / Ubuntu
 export HF_ENDPOINT=https://hf-mirror.com
+###### Windows: CMD / PowerShell
+set HF_ENDPOINT=https://hf-mirror.com        # CMD
+$env:HF_ENDPOINT = "https://hf-mirror.com"   # PowerShell
 #### 数据集下载
 huggingface-cli download --repo-type dataset --resume-download 复制数据集名称 --local-dir 下载路径
 #### 模型checkpoint下载
