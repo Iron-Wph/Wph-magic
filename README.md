@@ -152,6 +152,13 @@ huggingface-cli download --repo-type dataset --resume-download 复制数据集�
 #### 模型checkpoint下载
 huggingface-cli download --resume-download [huggingface对应仓库名字] --local-dir [默认使用仓库名字作保存]
 # eg: huggingface-cli download --resume-download stabilityai/stable-diffusion-3.5-medium --local-dir stabilityai/stable-diffusion-3.5-medium
+
+### new 指定下载某个文件
+hf download \
+  --repo-type dataset \
+  TianxingChen/RoboTwin2.0 \
+  dataset/place_empty_cup/aloha-agilex_clean_50.zip \
+  --local-dir ./datasets/place_empty_cup
 ```
 
 ### tmux使用
