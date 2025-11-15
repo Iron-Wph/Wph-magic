@@ -4,6 +4,19 @@
 ## 电子书网站
 https://zh.persian-books.sk/
 
+## ssh rsync 公钥配置
+```python
+# 生成本地公钥
+ssh-keygen -t ed25519 -C "你的邮箱（可选，用于标识密钥）"
+ssh-keygen -t rsa -b 4096 -C "你的邮箱（可选）"
+
+# 查看本地公钥
+cat ~/.ssh/id_ed25519.pub
+cat ~/.ssh/id_rsa.pub
+
+# 向服务器添加公钥
+nano ~/.ssh/authorized_keys
+```
 ## 快速向服务器传输文件，可能需要在同一个子网下
 ```python
 # 使用scp(已启用)，使用rsync(二者用法一致)
