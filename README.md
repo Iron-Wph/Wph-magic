@@ -4,6 +4,12 @@
 ## 电子书网站
 https://zh.persian-books.sk/
 
+## work
+```python
+export PYTHONPATH=/mnt/public/guozhen/test_robotwin/RLinf:/mnt/public/guozhen/test_robotwin/RLinf_RoboTwin:$PYTHONPATH
+source switch_env openvla-oft
+```
+
 ## Proxy配置
 ```python
 nano ~/.bashrc
