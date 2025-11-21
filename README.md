@@ -4,6 +4,15 @@
 ## 电子书网站
 https://zh.persian-books.sk/
 
+## Proxy配置
+```python
+nano ~/.bashrc
+# 添加字段
+alias proxy="export http_proxy=http://127.0.0.1:7897;export https_proxy=http://127.0.0.1:7897;export all_proxy=socks5://127.0.0.1:7897"
+alias unproxy="unset http_proxy;unset https_proxy;unset all_proxy"
+proxy
+
+```
 ## ssh rsync 公钥配置
 ```python
 # 生成本地公钥
