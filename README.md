@@ -10,6 +10,23 @@ export PYTHONPATH=/mnt/public/guozhen/test_robotwin/RLinf:/mnt/public/guozhen/te
 source switch_env openvla-oft
 ```
 
+### tmux使用
+```python
+###### 创建指定名称的会话
+tmux new-session -s 会话名称
+###### 切换到指定会话
+tmux a -t 会话名称
+###### 关闭会话
+exit # 会话内输入指令
+tmux kill-session -t 会话名称  # 会话外输入指令
+
+# 鼠标滚动
+nano ~/.tmux.conf
+set -g mouse on
+tmux source-file ~/.tmux.conf
+```
+
+
 ## Proxy配置
 ```python
 nano ~/.bashrc
@@ -187,17 +204,6 @@ hf download \
   TianxingChen/RoboTwin2.0 \
   dataset/place_empty_cup/aloha-agilex_clean_50.zip \
   --local-dir ./datasets/place_empty_cup
-```
-
-### tmux使用
-```python
-###### 创建指定名称的会话
-tmux new-session -s 会话名称
-###### 切换到指定会话
-tmux a -t 会话名称
-###### 关闭会话
-exit # 会话内输入指令
-tmux kill-session -t 会话名称  # 会话外输入指令
 ```
 
 ### 单机多卡训练，关闭所有进程
