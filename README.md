@@ -10,6 +10,50 @@ export PYTHONPATH=/mnt/public/guozhen/test_robotwin/RLinf:/mnt/public/guozhen/te
 source switch_env openvla-oft
 ```
 
+## vscode python debug常用配置
+先下载python debugger插件
+```python
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python 调试程序: 包含参数的当前文件",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "cwd": "/mnt/public_zgc/home/wph/RoboTwin",
+            "console": "integratedTerminal",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "1",
+                "PYTHONWARNINGS": "ignore::UserWarning",
+                "PATH": "/opt/conda/bin:${PATH}",        # 指定python路径，没试过，可以手动页面右下角切换conda环境
+                "PYTHONPATH": "/mnt/public_zgc/home/wph/RoboTwin/policy/openvla-oft:/mnt/public_zgc/home/wph/openvla-oft/experiments:/mnt/public_zgc/home/wph/RoboTwin/policy/openvla-oft/experiments:/mnt/public_zgc/home/wph/RoboTwin",
+            },
+            "args": [
+                // "${command:pickArgs}",
+                "--config",
+                "policy/openvla-oft/deploy_policy_clean.yml",
+                "--overrides",
+                "--task_name",
+                "place_empty_cup",
+                "--task_config",
+                "demo_randomized",
+                "--checkpoint_path",
+                "/mnt/public_zgc/home/wph/models/robotwin-oft-sft-place_empty_cup_rand-without_action_head/Optional_15000_chkpt/Optional_15000_chkpt",
+                "--ckpt_setting",
+                "/mnt/public_zgc/home/wph/models/robotwin-oft-sft-place_empty_cup_rand-without_action_head/Optional_15000_chkpt/Optional_15000_chkpt",
+                "--seed",
+                "0",
+                "--policy_name",
+                "openvla-oft",
+                "--unnorm_key",
+                "aloha_place_empty_cup_rand",
+            ]
+        }
+    ]
+}
+```
+
 ### tmux使用
 ```python
 ###### 创建指定名称的会话
