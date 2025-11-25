@@ -8,6 +8,26 @@ https://zh.persian-books.sk/
 ```python
 export PYTHONPATH=/mnt/public/guozhen/test_robotwin/RLinf:/mnt/public/guozhen/test_robotwin/RLinf_RoboTwin:$PYTHONPATH
 source switch_env openvla-oft
+
+### 镜像启动示例
+docker run -it \
+  --gpus all \  # 启用所有GPU（关键参数）
+  -v /home/peihong/envs:/workspace/envs \  # 挂载本地 envs 目录到容器 /workspace/envs
+  -v /home/peihong/codes:/workspace/codes \  # 挂载本地 codes 目录（含 robotwin_assets）
+  -v /home/peihong/data:/workspace/data \  # 可选：挂载数据目录（若脚本需要读取数据）
+  --network host \  # 共享主机网络（可选，方便容器访问外部服务）
+  --shm-size=32g \  # 增大共享内存（避免 GPU 训练时内存不足，根据需求调整）
+  beijing-i.cr.infini-ai.com:32443/te-dbdcudoygepmq5vx/rlinf:agentic-rlinf0.1-torch2.6.0-openvlaoft-pi0-robotwin \
+  /bin/bash  # 启动后进入 bash 终端
+
+
+docker run -it \
+  --gpus all \  
+  -v /home/peihong:/workspace/peihong \
+  --network host \  
+  --shm-size=32g \  
+  beijing-i.cr.infini-ai.com:32443/te-dbdcudoygepmq5vx/rlinf:agentic-rlinf0.1-torch2.6.0-openvlaoft-pi0-robotwin \
+  /bin/bash  
 ```
 
 ## vscode python debug常用配置
