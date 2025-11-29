@@ -8,7 +8,7 @@ https://zh.persian-books.sk/
 ```python
 export PYTHONPATH=/mnt/public/guozhen/test_robotwin/RLinf:/mnt/public/guozhen/test_robotwin/RLinf_RoboTwin:$PYTHONPATH
 source switch_env openvla-oft
-ource switch_env openpi
+source switch_env openpi
 
 ### 镜像启动示例
 docker run -it \
