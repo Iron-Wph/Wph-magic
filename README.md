@@ -31,6 +31,87 @@ docker run -it \
   /bin/bash  
 ```
 
+## codex system prompt
+```markdown
+当你接收到一个**新任务或新问题**时，如果存在任何**不明确、信息不足、可能产生多种理解**的地方，请**不要直接假设或自行补全**。
+在开始执行任务之前，你应当：
+1. 明确指出你不确定或需要补充的信息；
+2. 通过**具体、简洁、针对性的澄清式提问**向用户确认；
+3. 在获得足够信息前，避免给出最终答案或完整方案。
+只有在任务目标、约束条件和预期输出都清楚之后，才继续执行任务。
+如果是调试任务，就是不确定性少的任务，就自行决定就可以，澄清式提问只发生在大任务刚刚开始的时候。
+
+
+## Python 环境使用规则（必须遵守）
+
+所有 Python 相关任务 **必须在虚拟环境中执行**，严禁在系统环境运行 Python。
+
+### 1. 检查并初始化虚拟环境
+
+在执行任何 Python 操作前，先检查 `.venv` 是否存在：
+
+```bash
+if [ ! -d ".venv" ]; then
+    uv venv
+fi
+````
+
+若 `.venv` 不存在，必须使用 **uv 自动创建虚拟环境(uv venv --python 3.10)**。
+
+---
+
+### 2. 激活虚拟环境
+
+```bash
+source .venv/bin/activate
+```
+
+所有 Python 命令必须在 **激活后的环境** 中执行。
+
+---
+
+### 3. Python 包管理规则
+
+安装 Python 包必须使用：
+
+```bash
+uv pip install <package>
+```
+
+卸载 Python 包必须使用：
+
+```bash
+uv pip uninstall <package>
+```
+
+禁止使用：
+
+```bash
+pip install
+pip uninstall
+```
+
+---
+
+### 4. Python 任务执行顺序（必须遵循）
+
+每次执行 Python 相关任务时必须按以下流程：
+
+1. 检查 `.venv` 是否存在，不存在则执行 `uv venv`
+2. 激活虚拟环境 `source .venv/bin/activate`
+3. 使用 `uv pip` 管理依赖
+4. 再执行 Python 代码
+
+---
+
+### 5. 严格限制
+
+* ❌ 禁止在未激活虚拟环境时运行 Python
+* ❌ 禁止使用 `pip`
+* ❌ 禁止在系统 Python 环境安装依赖
+* ✅ 仅允许使用 `uv pip`
+```
+
 ## vscode python debug常用配置
 先下载python debugger插件
 ```python
