@@ -188,9 +188,13 @@ proxy
 ssh-keygen -t ed25519 -C "你的邮箱（可选，用于标识密钥）"
 ssh-keygen -t rsa -b 4096 -C "你的邮箱（可选）"
 
-# 查看本地公钥
+# Linux: 查看本地公钥
 cat ~/.ssh/id_ed25519.pub
 cat ~/.ssh/id_rsa.pub
+
+# Windows: 查看本地公钥
+type %USERPROFILE%\.ssh\id_rsa.pub
+type %USERPROFILE%\.ssh\id_ed25519.pub
 
 # 向服务器添加公钥
 nano ~/.ssh/authorized_keys
